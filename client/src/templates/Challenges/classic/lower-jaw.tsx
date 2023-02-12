@@ -191,13 +191,11 @@ const LowerJaw = ({
           <button
             className='btn fade-in'
             title={t('buttons.reset-step')}
-            aria-label={t('buttons.reset-step')}
             data-cy='reset-code-button'
             onClick={openResetModal}
-            style={{display: 'flex' , justifyContent: 'center' , alignItems : 'center'}}
           >
             <Reset />
-            <div style={{paddingLeft: '.3rem'}}>Reset</div>
+            {t('buttons.reset-step')}
           </button>
 
           {isAttemptsLargerThanTest && !challengeIsCompleted ? (
@@ -205,13 +203,11 @@ const LowerJaw = ({
               className='btn fade-in'
               id='get-help-button'
               title={t('buttons.get-help')}
-              aria-label={t('buttons.get-help')}
               data-cy='get-help-button'
               onClick={openHelpModal}
-            style={{display: 'flex' , justifyContent: 'center' , alignItems : 'center'}}
             >
               <Help />
-            <div style={{paddingLeft: '.3rem'}}>Help</div>
+             {t('buttons.get-help')}
             </button>
           ) : null}
         </div>
